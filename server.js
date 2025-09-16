@@ -9,6 +9,7 @@ const DB = process.env.DB_URI;
 const userRouter = require('./routes/userRoute');
 
 app.use(express.json());
+app.use('/api/v1', userRouter)
 app.get("/", (req, res)=>{
     res.send("Welcome to my Final Class App!")
 })
