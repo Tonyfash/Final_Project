@@ -22,13 +22,8 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     profiePicture:{
-        imageUrl: {
-            type: String,
-            required: true
-        }
-    },
-    publicId:{
-        type: String
+        imageUrl:{type: String, required: true},
+        publicId:{type: String, required: true}
     },
     phoneNumber:{
         type: String,
