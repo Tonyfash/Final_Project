@@ -7,9 +7,12 @@ const app = express();
 const cors = require('cors');
 const DB_URI = process.env.DB_URI;
 const userRouter = require('./routes/userRoute');
+const productRouter = require('./routes/product');
 
 app.use(express.json());
 app.use('/api/v1', userRouter)
+app.use('/api/v1', productRouter)
+
 app.get("/", (req, res)=>{
     res.send("Welcome to my Final Class App!")
 })
